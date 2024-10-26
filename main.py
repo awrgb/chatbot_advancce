@@ -1,5 +1,4 @@
 import os
-from dotenv import load_dotenv
 from typing import Annotated
 from typing_extensions import TypedDict
 from langgraph.graph import StateGraph, END, START
@@ -12,10 +11,7 @@ from langchain_core.messages import AIMessage, ToolMessage
 from pydantic import BaseModel
 import streamlit as st
 
-load_dotenv()
-
-google_api_key = os.getenv("GOOGLE_API_KEY")
-tavily_api_key = os.getenv("TAVILY_API_KEY")
+tavily_api_key = "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"
 memory = MemorySaver()
 
 class State(TypedDict):
